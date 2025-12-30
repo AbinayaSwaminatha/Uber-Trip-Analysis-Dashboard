@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 # Load Data
-df = pd.read_csv(r"C:\Users\Abinaya\Downloads\ride_bookings.csv")
+df = pd.read_csv("ride_bookings.csv")
 df.columns = df.columns.str.strip().str.replace(' ', '_')
 df['Datetime'] = pd.to_datetime(df['Date'] + ' ' + df['Time'], errors='coerce')
 df.dropna(subset=['Datetime'], inplace=True)
